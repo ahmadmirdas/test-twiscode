@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  dbtransaction:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=alhamdulillah
+    volumes:
+      - ./querytest/transaction.sql:/docker-entrypoint-initdb.d/transaction.sql
+    ports:
+      - "5432:5432"
